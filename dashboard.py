@@ -6,7 +6,6 @@ from StudyMaterial import studyMaterial
 from Instruction import instruction
 from Profile import profile
 from Taketest import Test
-from AboutUs import Aboutus
 
 
 class dashboard():
@@ -19,7 +18,7 @@ class dashboard():
 
 
         # =========================left side logo image================================
-        logo=Image.open("image\Terna.jpeg")
+        logo=Image.open("image\dash_logo.png")
         logo=logo.resize((200,120),Image.ANTIALIAS)
         self.photoimg=ImageTk.PhotoImage(logo)
 
@@ -64,7 +63,7 @@ class dashboard():
         test_button=Button(main_frame,text="Take Test",font=("times new roman",20,"bold"),bg="black" ,fg="gold", cursor="hand2",command=self.Test_Details)
         test_button.place(x=0,y=140,width=246,height=50)
 
-        about_button=Button(main_frame,text="About us",font=("times new roman",20,"bold"),bg="black" ,fg="gold", cursor="hand2",command=self.abput_us)
+        about_button=Button(main_frame,text="About us",font=("times new roman",20,"bold"),bg="black" ,fg="gold", cursor="hand2")
         about_button.place(x=0,y=190,width=246,height=50)
 
         study_button=Button(main_frame,text="Study Material",font=("times new roman",20,"bold"),bg="black" ,fg="gold", cursor="hand2",command=self.Study_Details)
@@ -95,9 +94,9 @@ class dashboard():
         self.new_Window = Toplevel(self.root)
         self.app3 = Test(self.new_Window)
 
-    def abput_us(self):
-        self.new_Window4 = Toplevel(self.root)
-        self.about = Aboutus(self.new_Window4)
+    # def abput_us(self):
+    #     self.new_Window4 = Toplevel(self.root)
+    #     self.about = Aboutus(self.new_Window4)
 
     def Study_Details(self):
         self.new_Window3 = Toplevel(self.root)
